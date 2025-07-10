@@ -1,0 +1,564 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #0c1a2b;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-simbolo {
+  width: 40px;
+  height: auto;
+}
+
+nav a {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #facc15;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: linear-gradient(to right, rgba(15, 23, 42, 0.5), rgba(15, 23, 42, 0.2)),
+              url('./imagens/pf-bg.jpg') no-repeat center center/cover;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 80px 60px;
+  box-sizing: border-box;
+}
+
+.texto-hero {
+  max-width: 600px;
+}
+
+.texto-hero h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.texto-hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.btn-destaque {
+  background-color: #facc15;
+  color: #000;
+  padding: 12px 24px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.btn-destaque:hover {
+  background-color: #e6b800;
+}
+
+
+.imagem-hero img {
+  max-width: 400px;
+  width: 100%;
+}
+
+/* SEÇÃO DE PREPARAÇÃO */
+/* Seção tipo hero fullscreen para preparação */
+.sessao-preparo.tela-cheia {
+  height: 100vh;
+  background-color: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  padding: 60px 20px;
+  
+}
+
+.conteudo-preparo {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  max-width: 1200px;
+  flex-wrap: wrap;
+}
+
+
+
+.texto-preparo {
+  flex: 1;
+  color: #111;
+}
+
+.texto-preparo h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #111827;
+}
+
+.texto-preparo ul {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.texto-preparo li {
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+
+/* SEÇÃO CARREIRAS */
+.sessao-carreiras {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f1f5f9;
+}
+
+.sessao-carreiras h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.cards-carreiras {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  max-width: 300px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.btn-mais {
+  background-color: #0f172a;
+  color: #fff;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-mais:hover {
+  background-color: #1e293b;
+}
+
+ 
+/* SEÇÃO MENTORIA */
+.mentoria-section {
+  background-color: #f8fafc;
+  padding: 60px 20px;
+}
+
+.mentoria-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+}
+
+.mentoria-texto {
+  flex: 1;
+  color: #1f2937;
+}
+
+.mentoria-texto h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.5rem;
+  color: #1f2937;
+  margin-bottom: 20px;
+}
+
+.mentoria-texto p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #1f2937;
+}
+
+.mentoria-texto ul {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.mentoria-texto li {
+  margin-bottom: 10px;
+  color: #1f2937;
+}
+
+.mentoria-img {
+  flex: 1;
+  text-align: center;
+}
+
+.mentoria-img img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.mentoria-texto .btn-destaque {
+  background-color: #facc15;
+  color: #000;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.mentoria-texto .btn-destaque:hover {
+  background-color: #e6b800;
+}
+
+/* FOOTER */
+.footer-modern {
+  background-color: #0f172a;
+  color: rgb(255, 255, 255);
+  padding: 60px 20px 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-col {
+  flex: 1 1 250px;
+  min-width: 250px;
+}
+
+.footer-col h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #facc15;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 8px;
+  transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: #facc15;
+}
+
+.logo-footer {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+.logo-text h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem;
+  margin: 10px 0;
+}
+
+.form-footer input,
+.form-footer textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.form-footer button {
+  background-color: #facc15;
+  border: none;
+  color: #000;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form-footer button:hover {
+  background-color: #e6b800;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 30px;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 40px;
+}
+
+.card {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: aparecer 0.8s ease forwards;
+}
+
+.card:nth-child(1) { animation-delay: 0.2s; }
+.card:nth-child(2) { animation-delay: 0.4s; }
+.card:nth-child(3) { animation-delay: 0.6s; }
+.card:nth-child(4) { animation-delay: 0.8s; }
+.card:nth-child(5) { animation-delay: 1s; }
+
+@keyframes aparecer {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.btn-destaque:hover,
+.btn-mais:hover {
+  box-shadow: 0 0 10px #facc15, 0 0 20px #facc15;
+  transform: scale(1.05);
+}
+
+.btn-destaque, .btn-mais, .form-footer button {
+  cursor: pointer;
+}
+
+.mentoria-img img {
+  animation: fadeIn 1.2s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+nav a {
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+  transform: translateY(-2px);
+}
+
+
+.modal-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.modal h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #1f2937;
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #555;
+}
+
+.form-cadastro {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-cadastro input,
+.form-cadastro select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-cadastro button {
+  background: #facc15;
+  border: none;
+  padding: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.form-cadastro button:hover {
+  background: #e6b800;
+}
+
+.area-aluno {
+  background-color: #f1f5f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.area-container {
+  max-width: 500px;
+  margin: 0 auto;
+  background: white;
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.area-container h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #1f2937;
+}
+
+.form-aluno {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+}
+
+.form-aluno label {
+  font-weight: bold;
+}
+
+.form-aluno input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.form-aluno button {
+  background-color: #facc15;
+  border: none;
+  padding: 12px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-aluno button:hover {
+  background-color: #e6b800;
+}
+
+.recuperar {
+  margin-top: 20px;
+  font-size: 0.95rem;
+}
+.recuperar a {
+  color: #0f172a;
+  text-decoration: underline;
+}

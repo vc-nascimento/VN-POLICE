@@ -1,0 +1,133 @@
+/* Fonte Bebas Neue */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  color: #111;
+}
+
+header {
+  background-color: #0f172a;
+  color: white;
+  padding: 20px 40px;
+  text-align: left;
+}
+
+header h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
+
+.pagina-carreira {
+    padding: 40px 80px 40px 60px; /* topo, direita, baixo, esquerda */
+    max-width: none;             /* remove o limite centralizador */
+    line-height: 1.6;
+    font-size: 1.1rem;
+  }
+  
+
+.pagina-carreira h2,
+.pagina-carreira h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  margin-top: 40px;
+  color: #0f172a;
+}
+
+.pagina-carreira ul {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  padding-left: 25px;
+}
+
+.pagina-carreira li {
+  margin-bottom: 10px;
+}
+
+/* Galeria de imagens */
+.galeria-imagens {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.galeria-imagens img {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  object-fit: cover;
+  height: 300px;
+}
+
+.galeria-imagens img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+}
+
+footer {
+  background-color: #0f172a;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #facc15; /* amarelo destaque */
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.galeria-imagens {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 60px;
+  }
+  
+  .imagem-legenda {
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .imagem-legenda img {
+    width: 100%;
+    max-width: 400px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .imagem-legenda img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+  }
+  
+  .imagem-legenda p {
+    margin-top: 8px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    color: #111;
+  }
+  
+  .texto-sobre {
+    max-width: 750px;
+    margin-left: 40px;
+    margin-right: auto;
+    text-align: left;
+  }
+  
