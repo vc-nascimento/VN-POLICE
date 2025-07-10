@@ -13,7 +13,7 @@ body {
   line-height: 1.6;
 }
 
-/* Header */
+/* HEADER */
 header {
   background-color: #0c1a2b;
   padding: 20px 40px;
@@ -23,6 +23,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
+  flex-wrap: wrap;
 }
 
 header h1 {
@@ -44,11 +45,12 @@ nav a {
   margin-left: 20px;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
 nav a:hover {
   color: #facc15;
+  transform: translateY(-2px);
 }
 
 /* HERO */
@@ -61,6 +63,8 @@ nav a:hover {
   align-items: center;
   padding: 80px 60px;
   box-sizing: border-box;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .texto-hero {
@@ -87,28 +91,30 @@ nav a:hover {
   text-decoration: none;
   border-radius: 30px;
   transition: 0.3s;
+  display: inline-block;
+  cursor: pointer;
 }
 
 .btn-destaque:hover {
   background-color: #e6b800;
+  box-shadow: 0 0 10px #facc15, 0 0 20px #facc15;
+  transform: scale(1.05);
 }
-
 
 .imagem-hero img {
   max-width: 400px;
   width: 100%;
 }
 
-/* SEÇÃO DE PREPARAÇÃO */
-/* Seção tipo hero fullscreen para preparação */
+/* PREPARAÇÃO */
 .sessao-preparo.tela-cheia {
-  height: 100vh;
+  height: auto;
   background-color: #f8fafc;
   display: flex;
   align-items: center;
   justify-content:center;
   padding: 60px 20px;
-  
+  flex-wrap: wrap;
 }
 
 .conteudo-preparo {
@@ -118,8 +124,6 @@ nav a:hover {
   max-width: 1200px;
   flex-wrap: wrap;
 }
-
-
 
 .texto-preparo {
   flex: 1;
@@ -145,8 +149,7 @@ nav a:hover {
   font-weight: 500;
 }
 
-
-/* SEÇÃO CARREIRAS */
+/* CARREIRAS */
 .sessao-carreiras {
   padding: 60px 20px;
   text-align: center;
@@ -163,25 +166,27 @@ nav a:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
-  padding: 0 20px;
   max-width: 1200px;
   margin: 0 auto;
-}
-
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  padding: 0 20px;
 }
 
 .card {
   background: #fff;
   border-radius: 10px;
-  max-width: 300px;
   padding: 20px;
   text-align: center;
   box-shadow: 0 6px 12px rgba(0,0,0,0.1);
   transition: 0.3s;
+  max-width: 100%;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: aparecer 0.8s ease forwards;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
 .card img {
@@ -211,14 +216,29 @@ nav a:hover {
   border-radius: 20px;
   font-weight: bold;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .btn-mais:hover {
   background-color: #1e293b;
+  box-shadow: 0 0 10px #facc15, 0 0 20px #facc15;
+  transform: scale(1.05);
 }
 
- 
-/* SEÇÃO MENTORIA */
+.card:nth-child(1) { animation-delay: 0.2s; }
+.card:nth-child(2) { animation-delay: 0.4s; }
+.card:nth-child(3) { animation-delay: 0.6s; }
+.card:nth-child(4) { animation-delay: 0.8s; }
+.card:nth-child(5) { animation-delay: 1s; }
+
+@keyframes aparecer {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* MENTORIA */
 .mentoria-section {
   background-color: #f8fafc;
   padding: 60px 20px;
@@ -241,27 +261,14 @@ nav a:hover {
 .mentoria-texto h2 {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 2.5rem;
-  color: #1f2937;
   margin-bottom: 20px;
 }
 
-.mentoria-texto p {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-  color: #1f2937;
-}
-
-.mentoria-texto ul {
-  list-style: none;
-  padding-left: 0;
-  font-size: 1rem;
-  line-height: 1.8;
-  margin-bottom: 30px;
-}
-
+.mentoria-texto p,
 .mentoria-texto li {
-  margin-bottom: 10px;
+  font-size: 1.1rem;
   color: #1f2937;
+  margin-bottom: 10px;
 }
 
 .mentoria-img {
@@ -274,27 +281,24 @@ nav a:hover {
   max-width: 450px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  animation: fadeIn 1.2s ease-in;
 }
 
-.mentoria-texto .btn-destaque {
-  background-color: #facc15;
-  color: #000;
-  padding: 10px 20px;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 30px;
-  transition: background-color 0.3s ease;
-  display: inline-block;
-}
-
-.mentoria-texto .btn-destaque:hover {
-  background-color: #e6b800;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 /* FOOTER */
 .footer-modern {
   background-color: #0f172a;
-  color: rgb(255, 255, 255);
+  color: #fff;
   padding: 60px 20px 20px;
   font-family: 'Arial', sans-serif;
 }
@@ -380,217 +384,41 @@ nav a:hover {
   margin-top: 40px;
 }
 
-.card {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: aparecer 0.8s ease forwards;
-}
-
-.card:nth-child(1) { animation-delay: 0.2s; }
-.card:nth-child(2) { animation-delay: 0.4s; }
-.card:nth-child(3) { animation-delay: 0.6s; }
-.card:nth-child(4) { animation-delay: 0.8s; }
-.card:nth-child(5) { animation-delay: 1s; }
-
-@keyframes aparecer {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
-.btn-destaque:hover,
-.btn-mais:hover {
-  box-shadow: 0 0 10px #facc15, 0 0 20px #facc15;
-  transform: scale(1.05);
-}
-
-.btn-destaque, .btn-mais, .form-footer button {
-  cursor: pointer;
-}
-
-.mentoria-img img {
-  animation: fadeIn 1.2s ease-in;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-nav a {
-  transition: color 0.3s ease, transform 0.2s ease;
-}
-
-nav a:hover {
-  transform: translateY(-2px);
-}
-
-
-.modal-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(15, 23, 42, 0.85);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 2000;
-}
-
-.modal {
-  background: white;
-  padding: 30px;
-  border-radius: 10px;
-  max-width: 500px;
-  width: 90%;
-  position: relative;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-.modal h2 {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-  color: #1f2937;
-}
-
-.close-modal {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  font-size: 24px;
-  cursor: pointer;
-  color: #555;
-}
-
-.form-cadastro {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.form-cadastro input,
-.form-cadastro select {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.form-cadastro button {
-  background: #facc15;
-  border: none;
-  padding: 12px;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 5px;
-  margin-top: 10px;
-  transition: 0.3s;
-}
-
-.form-cadastro button:hover {
-  background: #e6b800;
-}
-
-.area-aluno {
-  background-color: #f1f5f9;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.area-container {
-  max-width: 500px;
-  margin: 0 auto;
-  background: white;
-  padding: 40px 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.area-container h2 {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #1f2937;
-}
-
-.form-aluno {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  text-align: left;
-}
-
-.form-aluno label {
-  font-weight: bold;
-}
-
-.form-aluno input {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
-
-.form-aluno button {
-  background-color: #facc15;
-  border: none;
-  padding: 12px;
-  font-weight: bold;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.form-aluno button:hover {
-  background-color: #e6b800;
-}
-
-.recuperar {
-  margin-top: 20px;
-  font-size: 0.95rem;
-}
-.recuperar a {
-  color: #0f172a;
-  text-decoration: underline;
-}
-
-/* MEDIA QUERIES PARA RESPONSIVIDADE */
+/* RESPONSIVO */
 @media (max-width: 768px) {
-  .footer-container {
+  header {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    gap: 15px;
   }
 
-  .mentoria-container {
+  .hero {
     flex-direction: column;
     text-align: center;
+    padding: 60px 20px;
   }
 
-  .mentoria-texto h2 {
+  .texto-hero h2 {
     font-size: 2rem;
   }
 
-  .mentoria-texto ul {
-    font-size: 0.95rem;
+  .conteudo-preparo,
+  .mentoria-container {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
   }
 
-  .mentoria-img img {
-    max-width: 100%;
+  .cards-carreiras {
+    grid-template-columns: 1fr;
   }
 
-  .form-footer input,
-  .form-footer textarea,
-  .form-footer button {
-    width: 100%;
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-col {
+    min-width: 100%;
   }
 }
