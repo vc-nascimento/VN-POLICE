@@ -562,3 +562,35 @@ nav a:hover {
   color: #0f172a;
   text-decoration: underline;
 }
+
+/* MEDIA QUERIES PARA RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .mentoria-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .mentoria-texto h2 {
+    font-size: 2rem;
+  }
+
+  .mentoria-texto ul {
+    font-size: 0.95rem;
+  }
+
+  .mentoria-img img {
+    max-width: 100%;
+  }
+
+  .form-footer input,
+  .form-footer textarea,
+  .form-footer button {
+    width: 100%;
+  }
+}
